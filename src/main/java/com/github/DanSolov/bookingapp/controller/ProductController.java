@@ -18,19 +18,19 @@ public class ProductController {
 
     // Создание новой услуги
     @PostMapping
-    public Product createService(@RequestBody Product product) {
+    public Product createProduct(@RequestBody Product product) {
         return productService.createProduct(product);
     }
 
     // Получение услуги по названию
     @GetMapping("/name/{name}")
-    public Product getServiceByName(@PathVariable String name) {
+    public Product getProductByName(@PathVariable String name) {
         return productService.getProductByName(name);
     }
 
     // Получение услуги по id
     @GetMapping("/{id}")
-    public Product getServiceById(@PathVariable Long id) {
+    public Product getProductById(@PathVariable Long id) {
         return productService.getProductById(id);
     }
 }

@@ -23,7 +23,6 @@ public class UserController {
     }
 
 
-
     // Получение пользователя по email
     @GetMapping("/email/{email}")
     public User getUserByEmail(@PathVariable String email) {

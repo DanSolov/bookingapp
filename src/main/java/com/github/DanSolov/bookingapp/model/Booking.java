@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name = "bookings")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
