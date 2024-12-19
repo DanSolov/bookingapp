@@ -24,6 +24,7 @@ public class ProductController {
         // Получение полей из JSON
         Long providerId = Long.parseLong(request.get("providerId").toString());
         String name = request.get("name").toString();
+        String description = request.get("description").toString();
         Double price = Double.parseDouble(request.get("price").toString());
 
         // Загрузка провайдера по ID
@@ -35,7 +36,8 @@ public class ProductController {
         // Создание нового продукта
         Product product = new Product();
         product.setName(name);
-        product.setPrice(price); // Double вместо BigDecimal
+        product.setDescription(description);
+        product.setPrice(price);
         product.setProvider(provider);
 
         // Сохранение продукта

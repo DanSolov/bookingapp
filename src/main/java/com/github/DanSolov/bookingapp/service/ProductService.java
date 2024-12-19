@@ -33,6 +33,7 @@ public class ProductService {
     public Product getProductById(Long id) {
         return productRepository.findById(id).orElse(null);
     }
+    // Получение провайдера по id
     public Provider findProviderById(Long id) {
         return providerRepository.findById(id).orElse(null);
     }
